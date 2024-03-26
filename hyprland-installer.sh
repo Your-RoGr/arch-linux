@@ -3,13 +3,7 @@
 mkdir -p ~/.config/hypr
 mkdir -p ~/.config/waybar
 
-# sudo pacman -S xorg-server xorg-apps xorg-xinit
-git clone https://github.com/alacritty/alacritty.git
-cd alacritty
-sudo pacman -S cmake freetype2 fontconfig pkg-config make libxcb libxkbcommon python
-sudo pacman -S cargo
-cargo build --release --no-default-features --features=wayland
-
+sudo pacman -S --noconfirm dolphin
 yay -S --noconfirm hyprland
 yay -S --noconfirm hyprpaper
 yay -S --noconfirm waybar
@@ -573,8 +567,6 @@ tooltip {
     margin-left: 0px;
 }
 EOL
-
-
 
 sudo reboot
 

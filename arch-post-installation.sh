@@ -1,5 +1,30 @@
 #!/bin/bash
 
+echo "Enter your GPU manufacturer [1 - nvidia, 2 - amd] (press enter for default: 1):"
+read vendor
+vendor=$(echo $vendor | tr -cd '[:alnum:]_-')
+vendor=${vendor:-1}
+echo "You entered: $vendor"
+
+# Check if the user entered a number
+if [[ $vendor =~ ^[0-9]+$ ]]; then
+    if [ "$vendor" -eq 1 ]; then
+        echo "Installing Nvidia drivers..."
+        sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
+        # Enable the nvidia service
+        sudo systemctl enable nvidia-persistenced.service
+    elif [ "$vendor" -eq 2 ]; then
+        echo "Installing AMD drivers..."
+        sudo pacman -S --noconfirm xf86-video-amdgpu mesa mesa-demos vulkan-icd-loader lib32-mesa lib32-vulkan-icd-loader
+        # Enable the amdgpu service (if necessary)
+        sudo systemctl enable amdgpu-init.service
+    else
+        echo "Invalid entry. Please enter either 1 or 2."
+    fi
+else
+    echo "Invalid entry. Please enter either 1 or 2."
+fi
+
 # Enable multilib
 echo "Enabling multilib"
 sudo sed -i 's/#\[multilib\]/\[multilib\]/g' /etc/pacman.conf
@@ -29,43 +54,10 @@ fc-cache -fv
 echo "Installing alacritty"
 sudo pacman -S --noconfirm alacritty
 
-# sudo pacman -S clang base-devel gdb ninja gcc cmake libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite xorg-xinput libxrender pixman wayland-protocols cairo pango seatd libxkbcommon xcb-util-wm xorg-xwayland cmake wlroots mesa git meson polkit 
+# Install other soft
+echo "Installing git, clang, base-devel, gdb, ninja, gcc, cmake"
+sudo pacman -S --noconfirm git clang base-devel gdb ninja gcc cmake
 
 sudo reboot
 
 $SHELL
-
-# Install xorg
-# echo "Installing xorg"
-# sudo pacman -S --noconfirm xorg xorg-init xorg-server
-
-# Post-installation configuration
-# Enable dhcpcd
-# echo "Enabling dhcpcd"
-# sudo systemctl enable dhcpcd
-
-# Install alsa
-# echo "Installing alsa"
-# sudo pacman -S --noconfirm alsa-lib alsa-plugins alsa-tools alsa-utils
-
-# Configure keyboard layout for X11
-# echo "Configuring keyboard layout for X11"
-# cat > /etc/X11/xorg.conf.d/00-keyboard.conf << EOF
-# Section "InputClass"
-#     Identifier "system-keyboard"
-#     MatchIsKeyboard "on"
-#     Option "XkbLayout" "us,ru"
-#     Option "XkbModel" "pc105"
-#     Option "XkbOptions" "grp:alt_shift_toggle"
-# EndSection
-# EOF
-
-# Install fish
-# echo "Installing fish"
-# sudo pacman -S --noconfirm fish
-# fish
-# curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-# fisher install jorgebucaran/nvm.fish
-# fisher install IlanCosman/tide@v5
-# chsh -s /usr/bin/fish
-# set -U fish_greeting

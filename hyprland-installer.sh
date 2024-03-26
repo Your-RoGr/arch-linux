@@ -77,7 +77,7 @@ general {
 
     # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
     allow_tearing = false
-    no_cursor_warps = false
+    no_cursor_warps = true
     # no_border_on_floating = true
 }
 
@@ -160,7 +160,7 @@ bind = \$mainMod, Q, exec, \$terminal
 bind = \$mainMod, C, killactive,
 bind = \$mainMod, M, exit,
 bind = \$mainMod, E, exec, \$fileManager
-bind = \$mainMod, V, togglefloating,
+# bind = \$mainMod, V, togglefloating,
 bind = \$mainMod, R, exec, \$menu
 bind = \$mainMod, P, pseudo, # dwindle
 bind = \$mainMod, J, togglesplit, # dwindle

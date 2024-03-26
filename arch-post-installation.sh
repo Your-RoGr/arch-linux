@@ -54,6 +54,11 @@ fc-cache -fv
 echo "Installing alacritty"
 sudo pacman -S --noconfirm alacritty
 
+# install flatpak 
+echo "Installing flatpak"
+sudo pacman -S --noconfirm flatpak
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 # Install other soft
 echo "Installing git, clang, base-devel, gdb, ninja, gcc, cmake"
 sudo pacman -S --noconfirm git clang base-devel gdb ninja gcc cmake

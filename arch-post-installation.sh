@@ -56,6 +56,9 @@ echo "Installing alacritty"
 sudo pacman -S --noconfirm alacritty
 
 # install flatpak 
+echo "Installing xdg"
+sudo pacman -S --noconfirm xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr xdg-utils kde-cli-tools
+
 echo "Installing flatpak"
 sudo pacman -S --noconfirm flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -63,9 +66,6 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 # Install other soft
 echo "Installing clang, gdb, ninja, gcc, cmake, fastfetch, htop"
 sudo pacman -S --noconfirm clang gdb ninja gcc cmake fastfetch htop
-
-echo "Installing xdg"
-sudo pacman -S --noconfirm xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr
 
 sudo systemctl enable systemd-homed
 sudo systemctl start systemd-homed

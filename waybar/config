@@ -166,7 +166,7 @@
 
     "wireplumber": {
         "format": "🔈{volume}%",
-        "format-alt": "🔇",
+        "format-muted": "🔇",
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "on-click-middle": "pavucontrol",
         "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2%",

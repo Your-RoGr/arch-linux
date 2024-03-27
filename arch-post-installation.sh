@@ -38,7 +38,7 @@ sudo pacman -S --noconfirm ntp
 sudo systemctl enable ntpd
 
 # Install YAY
-echo "Installing YAY"
+echo "Installing git, base-devel, wget and YAY"
 sudo pacman -S --noconfirm git base-devel wget
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -60,8 +60,8 @@ sudo pacman -S --noconfirm flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # Install other soft
-echo "Installing git, clang, base-devel, gdb, ninja, gcc, cmake"
-sudo pacman -S --noconfirm git clang base-devel gdb ninja gcc cmake
+echo "Installing clang, gdb, ninja, gcc, cmake, fastfetch, htop"
+sudo pacman -S --noconfirm clang gdb ninja gcc cmake fastfetch htop
 
 sudo reboot
 

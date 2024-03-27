@@ -1,0 +1,176 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 50,
+    "width": 1900,
+
+    "modules-left": [
+        "group/c-w",
+        "hyprland/workspaces",
+        "wlr/taskbar",
+    ],
+
+    "modules-center": [
+        "group/center",
+    ],
+
+    "modules-right": [
+        "group/n",
+        "group/v",
+    ],
+
+    "group/c-w": {
+        "orientation": "inherit",
+        "modules": [
+            "clock",
+            "custom/weather",
+        ]
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<big>{:%D}</big>\n<tt>{calendar}</tt>",
+        "click-left": "hyprctl dispatch keybind waybar-hyprland-showcalendar",
+        "click-middle": "hyprctl dispatch keybind waybar-hyprland-showcalendar",
+        "click-right": "hyprctl dispatch keybind waybar-hyprland-showcalendar"
+    },
+
+    "custom/weather": {
+        "tooltip": true,
+        "format": "{}",
+        "interval": 3600,
+        "exec": "~/.config/waybar/scripts/waybar-wttr.py",
+        "return-type": "json"
+    },
+
+    "hyprland/workspaces": {
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "persistent-workspaces": {
+            "*": 1
+        }
+    },
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 14,
+        "icon-theme": "Numix-Circle",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+            "Alacritty"
+        ],
+    },
+
+    "group/center": {
+        "orientation": "inherit",
+        "modules": [
+            "temperature",
+            "cpu",
+            "custom/memory",
+            "memory",
+            "battery",
+        ]
+    },
+
+    "temperature": {
+        "tooltip": true,
+        "format": "🌡️{temperatureC}°C",
+        "interval": 30,
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": "🔲{}%",
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "🧠{}%",
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 40,
+            "critical": 30
+        },
+        "format": "{capacity}%",
+        "format-charging": "⚡{capacity}%",
+        "format-plugged": "🔋{capacity}%",
+        "format-alt": "{time}",
+    },
+
+    "group/n": {
+        "orientation": "inherit",
+        "modules": [
+            "network",
+            "hyprland/language",
+            "bluetooth",
+        ]
+    },
+
+    "network": {
+        "format-wifi": "🛜{signalStrength}%",
+        "format-ethernet": "🌐{ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "🌐{ifname} (No IP)",
+        "format-disconnected": "Disconnected ⚠",
+    },
+
+    "hyprland/language": {
+        "format": "{}🇺🇸",
+        "format-alt": "{}🇷🇺",
+        "format-en": "US",
+        "format-ru": "RU",
+        "keyboard-name": "at-translated-set-2-keyboard",
+        "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+    },
+
+    "bluetooth": {
+        "format": "📡{status}",
+        "format-alt": "📡{}",
+        "format-disabled": "📡{status}", // an empty format will hide the module
+        "format-connected": "📡{num_connections}",
+        "tooltip-format": "📡{device_alias}",
+        "tooltip-format-connected": "📡{device_enumerate}",
+        "tooltip-format-enumerate-connected": "📡{device_alias}",
+        "on-click-middle": "blueberry",
+        "on-click": "bash -c \"if [ \"$(bluetoothctl show | grep 'Powered' | cut -d ' ' -f2)\" == 'yes' ]; then bluetoothctl power off; else bluetoothctl power on; fi\"",
+    },
+
+    "group/v": {
+        "orientation": "inherit",
+        "modules": [
+            "backlight",
+            "wireplumber",
+        ]
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}{percent}%",
+        "format-icons": [
+            "🌑",
+            "🌤️",
+            "☀️"
+        ],
+        "on-scroll-up": "brightnessctl -q set 1%+",
+        "on-scroll-down": "brightnessctl -q set 1%-"
+    },
+
+    "wireplumber": {
+        "format": "🔈{volume}%",
+        "format-alt": "🔇",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-middle": "pavucontrol",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2%",
+    },
+
+}

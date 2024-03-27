@@ -48,6 +48,7 @@ rm -R -f ~/yay
 # Install font
 echo "Installing ttf-jetbrains-mono"
 sudo pacman -S --noconfirm ttf-jetbrains-mono
+yay -S --noconfirm noto-color-emoji-fontconfig
 fc-cache -fv
 
 # Install alacritty
@@ -62,6 +63,24 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 # Install other soft
 echo "Installing clang, gdb, ninja, gcc, cmake, fastfetch, htop"
 sudo pacman -S --noconfirm clang gdb ninja gcc cmake fastfetch htop
+
+echo "Installing xdg"
+sudo pacman -S --noconfirm xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr
+
+sudo systemctl enable systemd-homed
+sudo systemctl start systemd-homed
+
+echo "Installing brightnessctl"
+sudo pacman -S --noconfirm brightnessctl
+
+echo "Installing python package"
+sudo pacman -S --noconfirm python-requests
+
+echo "Installing audio drivers: pipewire/alsa"
+sudo pacman -S --noconfirm alsa-lib alsa-plugins alsa-tools alsa-utils
+sudo pacman -S --noconfirm pipewire pipewire-alsa pipewire-pulse pipewire-jack pipewire-audio pavucontrol bluez bluez-utils blueberry
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
 
 sudo reboot
 

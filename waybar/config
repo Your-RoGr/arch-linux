@@ -124,10 +124,9 @@
     },
 
     "hyprland/language": {
-        "format": "{}🇺🇸",
-        "format-alt": "{}🇷🇺",
-        "format-en": "US",
-        "format-ru": "RU",
+        "format-en": "US🇺🇸",
+        "format-ru": "RU🇷🇺",
+        "format-jp": "JP🇯🇵",
         "keyboard-name": "at-translated-set-2-keyboard",
         "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
     },

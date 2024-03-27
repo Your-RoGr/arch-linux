@@ -2,6 +2,7 @@
 
 mkdir -p ~/.config/hypr
 mkdir -p ~/.config/waybar
+cp -r scripts ~/.config/waybar/scripts/
 
 sudo pacman -S --noconfirm dolphin kde-cli-tools
 yay -S --noconfirm hyprland

@@ -46,9 +46,11 @@ makepkg -si --noconfirm
 rm -R -f ~/yay
 
 # Install font
-echo "Installing ttf-jetbrains-mono"
-sudo pacman -S --noconfirm ttf-jetbrains-mono
+echo "Installing fonts"
+sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-roboto
+yay -S --noconfirm ttf-ms-fonts ttf-vista-fonts ttf-paratype
 yay -S --noconfirm noto-color-emoji-fontconfig
+sudo pacman -S --noconfirm adobe-source-han-sans-jp-fonts adobe-source-han-serif-jp-fonts noto-fonts-cjk
 fc-cache -fv
 
 # Install alacritty

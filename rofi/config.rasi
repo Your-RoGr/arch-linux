@@ -45,7 +45,7 @@ inputbar {
 prompt {
     background-color: @blue;
     padding: 6px;
-    text-color: @bg-col;
+    text-color: @txt-col;
     border-radius: 3px;
     margin: 20px 0px 0px 20px;
 }
@@ -57,16 +57,16 @@ textbox-prompt-colon {
 
 entry {
     padding: 6px;
-    margin: 20px 0px 0px 10px;
+    margin: 20px 20px 0px 10px;
     text-color: @fg-col;
-    background-color: @bg-col;
+    background-color: @border-col;
     placeholder:"Search";
 }
 
 listview {
     border: 0px 0px 0px;
     padding: 6px 0px 0px;
-    margin: 10px 0px 0px 20px;
+    margin: 10px 20px 0px 20px;
     columns: 2;
     background-color: @bg-col;
 }

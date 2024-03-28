@@ -18,37 +18,38 @@ window#waybar {
 
 #workspaces button,
 #taskbar button {
-    padding: 5px;
+    padding: 3px;
     border-radius: 15px;
-    border-width: 0;
+    border-width: 2px;
     border-style: solid;
     border-color: rgba(255, 255, 255, 0);
-    color: #636777;
-    background-color: #3b3b62;
+    color: #FAFAFA;
+    background-color: #4B4C52;
     margin-right: 5px;
 }
 
 #workspaces button.active,
 #taskbar button.active {
-    background-color: #000;
+    background-color: #19191A;
+    border-color: #6573EB;
 }
 
 #workspaces button.focused,
 #taskbar button.focused {
-    color: #a6adc8;
-    background-color: #5c5c98;
+    background-color: #626266;
+    border-color: #6573EB;
 }
 
 #workspaces button.urgent,
 #taskbar button.urgent {
-    color: #11111b;
-    background: #a6e3a1;
+    background: #626266;
+    border-color: #6573EB;
 }
 
 #workspaces button:hover,
 #taskbar button:hover {
-    color: #11111b;
-    background: #11111b;
+    background: #626266;
+    border-color: #6573EB;
 }
 
 #c-w,
@@ -56,22 +57,22 @@ window#waybar {
 #n,
 #v {
     margin-top: 10px;
-    background: #1e1e2e;
+    background: #2F3033;
     border-radius: 15px;
     border-width: 2px;
     border-style: solid;
-    border-color: #11111b;
+    border-color: #2F3033;
     padding-left: 10px;
 }
 
 #workspaces,
 #taskbar {
     margin-top: 10px;
-    background: #1e1e2e;
+    background: #2F3033;
     border-radius: 15px;
     border-width: 2px;
     border-style: solid;
-    border-color: #11111b;
+    border-color: #2F3033;
     padding-left: 5px;
 }
 
@@ -120,7 +121,7 @@ window#waybar {
 }
 
 #network {
-    color: #f9e2af;
+    color: #FFEA7F;
 }
 
 #bluetooth {

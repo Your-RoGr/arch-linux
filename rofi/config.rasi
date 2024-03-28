@@ -9,10 +9,10 @@ configuration{
     location: 0;
     disable-history: false;
     hide-scrollbar: true;
-    display-drun: "   Apps ";
-    display-run: "   Run ";
-    display-window: "   window";
-    display-Network: " 󰤨  Network";
+    display-drun: "🚀 Apps";
+    display-run: "🧑🏻‍💻 Run";
+    display-window: "🖥️ window";
+    display-Network: "🌐 Network";
     sidebar-mode: true;
 }
 
@@ -24,10 +24,11 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
-    height: 360px;
+    height: 540px;
     border: 3px;
     border-color: @border-col;
     background-color: @bg-col;
+    padding: 5px;
 }
 
 mainbox {
@@ -87,7 +88,7 @@ element selected {
 
 mode-switcher {
     spacing: 0;
-  }
+}
 
 button {
     padding: 10px;

@@ -42,7 +42,7 @@ window#waybar {
 
 #workspaces button.urgent,
 #taskbar button.urgent {
-    background: #626266;
+    background: #F55467;
     border-color: #6573EB;
 }
 

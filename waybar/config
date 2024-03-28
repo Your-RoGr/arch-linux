@@ -86,7 +86,7 @@
 
     "cpu": {
         "interval": 10,
-        "format": "🔲{}%",
+        "format": "🔲{usage}%",
     },
 
     "memory": {

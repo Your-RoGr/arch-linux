@@ -6,11 +6,12 @@ mkdir -p ~/.config/rofi
 cp -r waybar/scripts ~/.config/waybar/scripts/
 chmod +x ~/.config/waybar/scripts/waybar-wttr.py
 
-sudo pacman -S --noconfirm dolphin kde-cli-tools
+sudo pacman -S --noconfirm kde-cli-tools
 yay -S --noconfirm hyprland
-yay -S --noconfirm hyprpaper
 yay -S --noconfirm waybar
 sudo pacman -S --noconfirm rofi
+sudo pacman -S --noconfirm thunar thunar-archive-plugin thunar-media-tags-plugin
+yay -S --noconfirm swww
 
 cp hyprland.conf ~/.config/hypr/hyprland.conf
 cp waybar/config ~/.config/waybar/config

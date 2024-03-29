@@ -99,7 +99,7 @@ echo "Chrooting into the installed system"
 
 mkdir -p /mnt/local/$username
 
-cat > /mnt/local/$username/continue_install.sh <<EOL
+cat > /mnt/local/$username/continue_install.sh << EOL
 #!/bin/bash
 
 # Configuring pacman on installer
@@ -131,13 +131,13 @@ echo "LANG=en_US.UTF-8" > /etc/locale.conf
 
 # Configuring hostname
 echo "Configuring hostname"
-sh -c "cat > /etc/hostname.conf <<EOL
+sh -c "cat > /etc/hostname.conf << EOL
 $hostname
 EOL"
 
 # Configuring hostname
 echo "Configuring hostname"
-sh -c "cat > /etc/hosts <<EOL
+sh -c "cat > /etc/hosts << EOL
 # Static table lookup for hostnames.
 # See hosts(5) for details.
 

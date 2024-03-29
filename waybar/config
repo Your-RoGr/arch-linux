@@ -90,7 +90,7 @@
     },
 
     "memory": {
-        "interval": 30,
+        "interval": 10,
         "format": "🧠{}%",
     },
 

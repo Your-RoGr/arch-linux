@@ -3,7 +3,11 @@
 mkdir -p ~/.config/hypr
 mkdir -p ~/.config/waybar
 mkdir -p ~/.config/rofi
+sudo mkdir -p /usr/share/wallpapers
+
 cp -r waybar/scripts ~/.config/waybar/scripts/
+sudo cp -r wallpapers ~/.config
+
 chmod +x ~/.config/waybar/scripts/waybar-wttr.py
 
 sudo pacman -S --noconfirm kde-cli-tools
@@ -19,7 +23,7 @@ cp waybar/style.css ~/.config/waybar/style.css
 cp rofi/config.rasi ~/.config/rofi/config.rasi
 cp rofi/catppuccin.rasi ~/.config/rofi/catppuccin.rasi
 
-cat > ~/.bash_profile <<EOL
+cat > ~/.bash_profile << EOL
 #
 # ~/.bash_profile
 #

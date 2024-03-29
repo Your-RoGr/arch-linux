@@ -32,12 +32,12 @@ window {
 }
 
 mainbox {
-    background-color: @bg-col;
+    background-color: @button-col;
 }
 
 inputbar {
     children: [prompt,entry];
-    background-color: @bg-col;
+    background-color: @button-col;
     border-radius: 5px;
     padding: 2px;
 }
@@ -68,12 +68,12 @@ listview {
     padding: 6px 0px 0px;
     margin: 10px 20px 0px 20px;
     columns: 2;
-    background-color: @bg-col;
+    background-color: @button-col;
 }
 
 element {
     padding: 5px;
-    background-color: @bg-col;
+    background-color: @button-col;
     text-color: @fg-col  ;
 }
 
@@ -99,6 +99,5 @@ button {
 }
 
 button selected {
-  background-color: @bg-col;
-  text-color: @blue;
+  background-color: @button-col;
 }

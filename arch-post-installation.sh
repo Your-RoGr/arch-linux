@@ -84,6 +84,9 @@ sudo pacman -S --noconfirm pipewire pipewire-alsa pipewire-pulse pipewire-jack p
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
+echo "Installing xdg-desktop-portal-wlr"
+sudo pacman -S --noconfirm xdg-desktop-portal-wlr # For screencast
+
 sudo reboot
 
 $SHELL

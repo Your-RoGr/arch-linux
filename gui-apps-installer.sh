@@ -2,6 +2,8 @@
 
 # flatpak gui app's 
 
+mkdir -p ~/.config/Downloads
+
 # Audio & Video
 
 # VLC media player, the open-source multimedia player

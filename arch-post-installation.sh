@@ -84,8 +84,28 @@ sudo pacman -S --noconfirm pipewire pipewire-alsa pipewire-pulse pipewire-jack p
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
+# For screencast
 echo "Installing xdg-desktop-portal-wlr"
-sudo pacman -S --noconfirm xdg-desktop-portal-wlr # For screencast
+sudo pacman -S --noconfirm xdg-desktop-portal-wlr
+
+echo "Do you need an app for logitech, asus-rog, steelseries and other gaming mice? (press enter for default: [yes])"
+read mice_app
+mice_app=${mice_app:-yes}
+
+if [[ "${mice_app}" == "yes" ]]; then
+    echo "Installing piper"
+    sudo pacman -S --noconfirm piper
+
+    cat << EOL | sudo tee /usr/share/libratbag/logitech-g102-g203.device > /dev/null
+# G102, G103 and G203 (USB)
+[Device]
+Name=Logitech Gaming Mouse G102/G103/G203
+DeviceMatch=usb:046d:c084;usb:046d:c092;usb:046d:c09d
+Driver=hidpp20
+LedTypes=logo;side;
+DeviceType=mouse
+EOL
+fi
 
 sudo reboot
 

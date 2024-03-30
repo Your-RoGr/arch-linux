@@ -56,6 +56,7 @@ run_cmd() {
 		elif [[ $1 == '--reboot' ]]; then
 			systemctl reboot
 		elif [[ $1 == '--suspend' ]]; then
+		  swaylock -C ~/.config/swaylock/config &
 			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
             hyprctl dispatch exit 1
@@ -75,7 +76,7 @@ case ${chosen} in
 		run_cmd --reboot
         ;;
     $lock)
-		swaylock
+		swaylock -C ~/.config/swaylock/config
         ;;
     $suspend)
 		run_cmd --suspend

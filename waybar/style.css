@@ -107,9 +107,12 @@ window#waybar {
     color: #fab387;
 }
 
-#temperature.critical,
-#custom-power-menu {
+#temperature.critical {
     color: #f00;
+}
+
+#custom-power-menu {
+    color: rgba(245, 84, 103, 0.90);
 }
 
 #memory {

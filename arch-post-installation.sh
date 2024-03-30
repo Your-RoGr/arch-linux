@@ -85,7 +85,8 @@ sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
 # For screencast
-echo "Installing xdg-desktop-portal-wlr"
+echo "Installing xdg-desktop-portal"
+sudo pacman -S --noconfirm xdg-desktop-portal-hyprland
 sudo pacman -S --noconfirm xdg-desktop-portal-wlr
 
 echo "Do you need an app for logitech, asus-rog, steelseries and other gaming mice? (press enter for default: [yes])"

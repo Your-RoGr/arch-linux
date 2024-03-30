@@ -75,6 +75,9 @@ sudo systemctl start systemd-homed
 echo "Installing brightnessctl"
 sudo pacman -S --noconfirm brightnessctl
 
+echo "Installing iwgtk"
+yay -S --noconfirm  iwgtk
+
 echo "Installing python package"
 sudo pacman -S --noconfirm python-requests
 
@@ -85,7 +88,7 @@ sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
 # For screencast
-echo "Installing xdg-desktop-portal"
+echo "Installing xdg-desktop-portal-hyprland"
 sudo pacman -S --noconfirm xdg-desktop-portal-hyprland
 sudo pacman -S --noconfirm xdg-desktop-portal-wlr
 

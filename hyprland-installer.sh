@@ -18,6 +18,7 @@ yay -S --noconfirm waybar
 sudo pacman -S --noconfirm swaylock
 yay -S --noconfirm swaylock-effects
 sudo pacman -S --noconfirm rofi
+sudo pacman -S --noconfirm gvfs
 sudo pacman -S --noconfirm thunar thunar-archive-plugin thunar-media-tags-plugin
 yay -S --noconfirm swww
 

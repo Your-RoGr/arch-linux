@@ -13,6 +13,7 @@ chmod +x ~/.config/waybar/scripts/waybar-wttr.py
 sudo pacman -S --noconfirm kde-cli-tools
 yay -S --noconfirm hyprland
 yay -S --noconfirm waybar
+sudo pacman -S --noconfirm swaylock
 sudo pacman -S --noconfirm rofi
 sudo pacman -S --noconfirm thunar thunar-archive-plugin thunar-media-tags-plugin
 yay -S --noconfirm swww

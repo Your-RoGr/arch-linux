@@ -92,15 +92,23 @@ window#waybar {
 #language,
 #bluetooth,
 #backlight,
-#wireplumber {
+#wireplumber,
+#custom-power-menu {
     margin-right: 10px;
+}
+
+#custom-power-menu {
+    font-size: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #clock {
     color: #fab387;
 }
 
-#temperature.critical {
+#temperature.critical,
+#custom-power-menu {
     color: #f00;
 }
 

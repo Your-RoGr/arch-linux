@@ -148,6 +148,7 @@
         "modules": [
             "backlight",
             "wireplumber",
+            "custom/power-menu",
         ]
     },
 
@@ -172,4 +173,8 @@
         "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2%",
     },
 
+    "custom/power-menu": {
+        "format": "⏻",
+        "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh &",
+    },
 }

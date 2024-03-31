@@ -4,7 +4,9 @@
 
 mkdir -p ~/.config/Downloads
 
+# --------------------------------------------------------------------------
 # Audio & Video
+# --------------------------------------------------------------------------
 
 # VLC media player, the open-source multimedia player
 # VLC is potentially unsafe
@@ -36,7 +38,25 @@ sudo flatpak install -y flathub org.blender.Blender
 echo "Installing Krita"
 sudo flatpak install -y flathub org.kde.krita
 
+# --------------------------------------------------------------------------
+# Docs
+# --------------------------------------------------------------------------
+
+# For pdf
+# LibreOffice is potentially unsafe
+
+echo "Installing LibreOffice"
+sudo flatpak install -y flathub org.libreoffice.LibreOffice
+
+# Office productivity suite
+# ONLYOFFICE Desktop Editors is potentially unsafe
+
+echo "Installing ONLYOFFICE"
+sudo flatpak install -y flathub org.onlyoffice.desktopeditors
+
+# --------------------------------------------------------------------------
 # Developer Tools
+# --------------------------------------------------------------------------
 
 # Platform for building and using APIs
 # Postman is potentially unsafe
@@ -44,13 +64,11 @@ sudo flatpak install -y flathub org.kde.krita
 echo "Installing Postman"
 sudo flatpak install -y flathub com.getpostman.Postman
 
-
 # DB Browser for SQLite is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite.
 # DB Browser for SQLite is potentially unsafe
 
 echo "Installing DB Browser for SQLite"
 sudo flatpak install -y flathub org.sqlitebrowser.sqlitebrowser
-
 
 # The most intelligent Python IDE
 # PyCharm-Professional is potentially unsafe
@@ -58,13 +76,11 @@ sudo flatpak install -y flathub org.sqlitebrowser.sqlitebrowser
 echo "Installing PyCharm-Professional"
 sudo flatpak install -y flathub com.jetbrains.PyCharm-Professional
 
-
 # GoLand is a cross-platform IDE built specially for Go developers
 # GoLand is potentially unsafe
 
 echo "Installing GoLand"
 sudo flatpak install -y flathub com.jetbrains.GoLand
-
 
 # A cross-platform IDE for C and C++
 # CLion is potentially unsafe
@@ -72,13 +88,11 @@ sudo flatpak install -y flathub com.jetbrains.GoLand
 echo "Installing CLion"
 sudo flatpak install -y flathub com.jetbrains.CLion
 
-
 # Easily create 2D and 3D games
 # Godot Engine is potentially unsafe
 
 # echo "Installing Godot Engine"
 # sudo flatpak install -y flathub org.godotengine.Godot
-
 
 # Godots is the ultimate hub for managing your Godot versions and projects.
 # Godots is potentially unsafe
@@ -86,18 +100,15 @@ sudo flatpak install -y flathub com.jetbrains.CLion
 echo "Installing Godots"
 sudo flatpak install -y flathub io.github.MakovWait.Godots
 
-
 # Godot (C#/.NET) is potentially unsafe
 
 # echo "Installing Godot (C#/.NET)"
 # sudo flatpak install -y flathub org.godotengine.GodotSharp
 
-
 # Qt Designer lets you created and edit .ui files for your Qt Widgets Application
 
 # echo "Installing Qt Designer"
 # sudo flatpak install -y flathub io.qt.Designer
-
 
 # Open-source electronics prototyping platform
 # Arduino IDE v2 is potentially unsafe
@@ -105,8 +116,9 @@ sudo flatpak install -y flathub io.github.MakovWait.Godots
 # echo "Installing Arduino IDE v2"
 # sudo flatpak install -y flathub cc.arduino.IDE2
 
-
+# --------------------------------------------------------------------------
 # Networking
+# --------------------------------------------------------------------------
 
 # Fast. Secure. Powerful.
 # Telegram Desktop is potentially unsafe
@@ -114,13 +126,11 @@ sudo flatpak install -y flathub io.github.MakovWait.Godots
 echo "Installing Telegram Desktop"
 sudo flatpak install -y flathub org.telegram.desktop
 
-
 # The web browser from Yandex
 # Yandex Browser is potentially unsafe
 
 echo "Installing Yandex Browser"
 sudo flatpak install -y flathub ru.yandex.Browser
-
 
 # Messaging, voice and video client
 # Discord is potentially unsafe
@@ -128,15 +138,15 @@ sudo flatpak install -y flathub ru.yandex.Browser
 echo "Installing Discord"
 sudo flatpak install -y flathub com.discordapp.Discord
 
-
 # Thunderbird is a free and open source email, newsfeed, chat, and calendaring client
 # Thunderbird is potentially unsafe
 
 echo "Installing Thunderbird"
 sudo flatpak install -y flathub org.mozilla.Thunderbird
 
-
+# --------------------------------------------------------------------------
 # Utilities
+# --------------------------------------------------------------------------
 
 # Obsidian is potentially unsafe
 # Obsidian is potentially unsafe
@@ -186,8 +196,9 @@ sudo flatpak install -y flathub org.gnome.clocks
 echo "Installing Bottles"
 sudo flatpak install -y flathub com.usebottles.bottles
 
-
+# --------------------------------------------------------------------------
 # Entertainments 
+# --------------------------------------------------------------------------
 
 # A cross-platform downloader for manga and anime from various websites
 # HakuNeko is potentially unsafe
@@ -195,8 +206,9 @@ sudo flatpak install -y flathub com.usebottles.bottles
 # echo "Installing HakuNeko"
 # sudo flatpak install -y flathub io.github.hakuneko.HakuNeko
 
-
+# --------------------------------------------------------------------------
 # Games
+# --------------------------------------------------------------------------
 
 # Launcher for the Steam software distribution service
 # Steam is potentially unsafe
@@ -204,15 +216,15 @@ sudo flatpak install -y flathub com.usebottles.bottles
 echo "Installing Steam"
 sudo flatpak install -y flathub com.valvesoftware.Steam
 
-
 # x86/DOS emulator with sound and graphics
 # DOSBox is potentially unsafe
 
 # echo "Installing DOSBox"
 # sudo flatpak install -y flathub com.dosbox.DOSBox
 
-
+# --------------------------------------------------------------------------
 # Science
+# --------------------------------------------------------------------------
 
 # Powerful and easy to use calculator
 # Qalculate! (Qt UI) is probably safe
@@ -220,13 +232,11 @@ sudo flatpak install -y flathub com.valvesoftware.Steam
 echo "Installing Qalculate"
 sudo flatpak install -y flathub io.github.Qalculate.qalculate-qt
 
-
 # Molecular visualization and raytracing
 # Python Molecular Graphics is potentially unsafe
 
 # echo "Installing Python Molecular Graphics"
 # sudo flatpak install -y flathub org.pymol.PyMOL
-
 
 # A Realtime Satellite Orbit Visualizer
 # OrbVis is probably safe
@@ -234,8 +244,8 @@ sudo flatpak install -y flathub io.github.Qalculate.qalculate-qt
 # echo "Installing OrbVis"
 # sudo flatpak install -y flathub io.github.wojciech_graj.OrbVis
 
-
+# --------------------------------------------------------------------------
 # Install other gui app's 
-
+# --------------------------------------------------------------------------
 
 $SHELL

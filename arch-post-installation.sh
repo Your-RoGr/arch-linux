@@ -66,8 +66,9 @@ sudo pacman -S --noconfirm flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # Install other soft
-echo "Installing clang, gdb, ninja, gcc, cmake, fastfetch, htop"
-sudo pacman -S --noconfirm clang gdb ninja gcc cmake fastfetch htop
+echo "Installing clang, gdb, ninja, gcc, cmake, fastfetch, htop, bashtop, fish, lf, neovim"
+sudo pacman -S --noconfirm clang gdb ninja gcc cmake fastfetch htop bashtop fish lf neovim
+set -U fish_greeting
 
 sudo systemctl enable systemd-homed
 sudo systemctl start systemd-homed

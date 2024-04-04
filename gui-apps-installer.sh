@@ -210,12 +210,6 @@ sudo flatpak install -y flathub com.usebottles.bottles
 # Games
 # --------------------------------------------------------------------------
 
-# Launcher for the Steam software distribution service
-# Steam is potentially unsafe
-
-echo "Installing Steam"
-sudo flatpak install -y flathub com.valvesoftware.Steam
-
 # x86/DOS emulator with sound and graphics
 # DOSBox is potentially unsafe
 
@@ -247,5 +241,7 @@ sudo flatpak install -y flathub io.github.Qalculate.qalculate-qt
 # --------------------------------------------------------------------------
 # Install other gui app's 
 # --------------------------------------------------------------------------
+
+yay -S --noconfirm figma-linux
 
 $SHELL

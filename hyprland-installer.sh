@@ -6,6 +6,7 @@ mkdir -p ~/.config/rofi
 mkdir -p ~/.config/swaylock
 mkdir -p ~/.config/swww
 mkdir -p ~/.config/Thunar
+mkdir -p ~/.config/alacritty
 sudo mkdir -p /usr/share/wallpapers
 
 cp -r waybar/scripts ~/.config/waybar/scripts/
@@ -31,6 +32,7 @@ cp rofi/catppuccin.rasi ~/.config/rofi/catppuccin.rasi
 cp swaylock/config ~/.config/swaylock/config
 cp swww/swww-random.sh ~/.config/swww/swww-random.sh
 cp Thunar/uca.xml ~/.config/Thunar/uca.xml
+cp alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 
 cat > ~/.bash_profile << EOL
 #

@@ -1,15 +1,19 @@
 #!/bin/bash
 
 sudo pacman -Syu
+sudo pacman -S --noconfirm intel-media-driver
+sudo pacman -S --noconfirm libva-intel-driver
+sudo pacman -S --noconfirm libva-intel-driver libva-mesa-driver mesa-vdpau
 
-echo "Enter your GPU manufacturer [1 - nvidia, 2 - amd] (press enter for default: 1):"
+echo "Enter your GPU manufacturer [1 - nvidia (For GTX 750 and newer), 2 - amd or skip] (press enter for default: 1):"
 read vendor
 vendor=$(echo $vendor | tr -cd '[:alnum:]_-')
 vendor=${vendor:-1}
 echo "You entered: $vendor"
 
-# Check if the user entered a number
-if [[ $vendor =~ ^[0-9]+$ ]]; then
+if [[ "${vendor:0:4}" == "skip" ]]; then
+    echo "Driver installing skipped"
+elif [[ $vendor =~ ^[0-9]+$ ]]; then
     if [ "$vendor" -eq 1 ]; then
         echo "Installing Nvidia drivers..."
         sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings lib32-nvidia-utils
@@ -32,7 +36,7 @@ echo "Enabling multilib"
 sudo sed -i 's/#\[multilib\]/\[multilib\]/g' /etc/pacman.conf
 sudo sed -i 's/#Include = \/etc\/pacman.d\/mirrorlist/Include = \/etc\/pacman.d\/mirrorlist/g' /etc/pacman.conf
 
-sudo pacman -Sy --noconfirm
+sudo pacman -Syu --noconfirm
 
 # Install ntp
 echo "Installing ntp"
@@ -116,6 +120,10 @@ LedTypes=logo;side;
 DeviceType=mouse
 EOL
 fi
+
+#cat > /etc/X11/xorg.conf << EOL
+#Option "metamodes" "nvidia-auto-select +0+0 { ForceCompositionPipeline = On }"
+#EOL
 
 sudo reboot
 

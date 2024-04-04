@@ -149,7 +149,7 @@
     "hyprland/language": {
         "format-en": "US🇺🇸",
         "format-ru": "RU🇷🇺",
-        "format-jp": "JP🇯🇵",
+        "format-ja": "JP🇯🇵",
         "keyboard-name": "at-translated-set-2-keyboard",
         "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
     },

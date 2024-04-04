@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo pacman -Syu
+
 echo "Enter your GPU manufacturer [1 - nvidia, 2 - amd] (press enter for default: 1):"
 read vendor
 vendor=$(echo $vendor | tr -cd '[:alnum:]_-')
@@ -78,6 +80,9 @@ sudo pacman -S --noconfirm brightnessctl
 
 echo "Installing iwgtk"
 yay -S --noconfirm  iwgtk
+
+echo "Installing cpupower-gui-git"
+yay -S --noconfirm  cpupower-gui-git
 
 echo "Installing python package"
 sudo pacman -S --noconfirm python-requests

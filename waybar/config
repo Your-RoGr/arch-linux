@@ -53,7 +53,8 @@
             "on-click": "mode",
             "on-scroll-up": "shift_up",
             "on-scroll-down": "shift_down"
-        }
+        },
+        "on-click-middle": "gnome-clocks",
     },
 
     "custom/weather": {
@@ -92,23 +93,26 @@
             "custom/memory",
             "memory",
             "battery",
-        ]
+        ],
     },
 
     "temperature": {
         "tooltip": true,
         "format": "🌡️{temperatureC}°C",
         "interval": 30,
+        "on-click-middle": "cpupower-gui",
     },
 
     "cpu": {
         "interval": 10,
         "format": "🔲{usage}%",
+        "on-click-middle": "cpupower-gui",
     },
 
     "memory": {
         "interval": 10,
         "format": "🧠{}%",
+        "on-click-middle": "cpupower-gui",
     },
 
     "battery": {
@@ -117,10 +121,11 @@
             "warning": 40,
             "critical": 30
         },
-        "format": "{capacity}%",
+        "format": "🔋{capacity}%",
         "format-charging": "⚡{capacity}%",
-        "format-plugged": "🔋{capacity}%",
+        "format-plugged": "🔌{capacity}%",
         "format-alt": "{time}",
+        "on-click-middle": "cpupower-gui",
     },
 
     "group/n": {

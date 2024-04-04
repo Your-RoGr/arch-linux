@@ -22,7 +22,9 @@ yay -S --noconfirm swaylock-effects
 sudo pacman -S --noconfirm rofi
 sudo pacman -S --noconfirm gvfs
 sudo pacman -S --noconfirm thunar thunar-archive-plugin thunar-media-tags-plugin
+sudo pacman -S --noconfirm grim slurp wl-clipboard
 yay -S --noconfirm swww
+yay -S --noconfirm hyprpicker
 
 cp hyprland.conf ~/.config/hypr/hyprland.conf
 cp waybar/config ~/.config/waybar/config

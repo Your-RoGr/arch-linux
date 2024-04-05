@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo rm -rf /local
+
 sudo pacman -Syu
 sudo pacman -S --noconfirm intel-media-driver
 sudo pacman -S --noconfirm libva-intel-driver
@@ -121,10 +123,7 @@ DeviceType=mouse
 EOL
 fi
 
-#cat > /etc/X11/xorg.conf << EOL
-#Option "metamodes" "nvidia-auto-select +0+0 { ForceCompositionPipeline = On }"
-#EOL
-
-sudo reboot
+chmod +x hyprland-installer.sh
+./hyprland-installer.sh
 
 $SHELL

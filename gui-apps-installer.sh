@@ -216,5 +216,3 @@ sudo flatpak install -y flathub org.kde.ark
 
 echo "Installing gnome-clocks"
 sudo pacman -S --noconfirm gnome-clocks
-
-$SHELL

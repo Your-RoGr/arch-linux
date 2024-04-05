@@ -9,7 +9,7 @@ mkdir -p ~/.config/Thunar
 mkdir -p ~/.config/alacritty
 sudo mkdir -p /usr/share/wallpapers
 
-cp -r waybar/scripts ~/.config/waybar/scripts/
+cp -r waybar/scripts ~/.config/waybar/scripts
 sudo cp -r wallpapers ~/.config
 
 chmod +x ~/.config/waybar/scripts/waybar-wttr.py
@@ -36,6 +36,22 @@ cp swww/swww-random.sh ~/.config/swww/swww-random.sh
 cp Thunar/uca.xml ~/.config/Thunar/uca.xml
 cp alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 
+yay -S --noconfirm breeze-snow-cursor-theme
+
+mkdir -p ~/.config/gtk-3.0
+mkdir -p ~/.config/gtk-4.0
+mkdir -p ~/.icons/default
+sudo mkdir -p /usr/share/icons/default
+
+cp -r /usr/share/icons/Breeze_Snow ~/.icons/Breeze_Snow
+
+cp gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini
+cp gtk-3.0/settings.ini ~/.config/gtk-4.0/settings.ini
+cp default/index.theme ~/.icons/default/index.theme
+sudo cp default/index.theme /usr/share/icons/default/index.theme
+
+gsettings set org.gnome.desktop.interface cursor-theme Breeze_Snow
+
 cat > ~/.bash_profile << EOL
 #
 # ~/.bash_profile
@@ -45,33 +61,11 @@ cat > ~/.bash_profile << EOL
 exec Hyprland
 EOL
 
+chmod +x gui-apps-installer.sh
+chmod +x python-installer.sh
+chmod +x games-installer.sh
+./gui-apps-installer.sh
+./python-installer.sh
+./games-installer.sh
+
 sudo reboot
-
-$SHELL
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

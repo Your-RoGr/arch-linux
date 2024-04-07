@@ -17,7 +17,7 @@ chmod +x ~/.config/waybar/scripts/waybar-wttr.py
 sudo pacman -Sy --noconfirm kde-cli-tools
 yay -Sy --noconfirm hyprland
 yay -Sy --noconfirm waybar
-sudo pacman -Sy --noconfirm swaylock
+sudo pacman -Sy --noconfirm swaylock hypridle
 yay -Sy --noconfirm swaylock-effects
 sudo pacman -Sy --noconfirm rofi
 sudo pacman -Sy --noconfirm gvfs
@@ -27,6 +27,7 @@ yay -Sy --noconfirm swww
 yay -Sy --noconfirm hyprpicker
 
 cp hyprland.conf ~/.config/hypr/hyprland.conf
+cp hypridle.conf ~/.config/hypr/hypridle.conf
 cp waybar/config ~/.config/waybar/config
 cp waybar/style.css ~/.config/waybar/style.css
 cp rofi/config.rasi ~/.config/rofi/config.rasi

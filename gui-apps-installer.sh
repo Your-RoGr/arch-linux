@@ -149,6 +149,11 @@ yay -Sy --noconfirm godot-mono-bin
 # Networking
 # --------------------------------------------------------------------------
 
+# Discord desktop app via browser
+
+echo "Installing WebCord"
+yay -S --noconfirm webcord
+
 # Telegram
 
 echo "Installing telegram-desktop"

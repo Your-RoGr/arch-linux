@@ -65,13 +65,14 @@ fc-cache -fv
 echo "Installing alacritty"
 sudo pacman -Sy --noconfirm alacritty
 
-# install flatpak 
+# install xdg
 echo "Installing xdg"
 sudo pacman -Sy --noconfirm xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr xdg-utils kde-cli-tools
 
-echo "Installing flatpak"
-sudo pacman -Sy --noconfirm flatpak
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+# install flatpak
+#echo "Installing flatpak"
+#sudo pacman -Sy --noconfirm flatpak
+#sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # Install other soft
 echo "Installing clang, gdb, ninja, gcc, cmake, fastfetch, htop, bashtop, fish, lf, neovim"
@@ -85,10 +86,10 @@ echo "Installing brightnessctl"
 sudo pacman -Sy --noconfirm brightnessctl
 
 echo "Installing iwgtk"
-yay -Sy --noconfirm  iwgtk
+yay -Sy --noconfirm iwgtk
 
 echo "Installing cpupower-gui-git"
-yay -Sy --noconfirm  cpupower-gui-git
+yay -Sy --noconfirm cpupower-gui-git
 
 echo "Installing python package"
 sudo pacman -Sy --noconfirm python-requests

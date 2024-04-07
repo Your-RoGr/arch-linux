@@ -1,5 +1,5 @@
 #!/bin/bash
 
-sudo pacman -S --noconfirm steam
-yay -S --noconfirm portproton
-yay -S --noconfirm protonup-qt
+sudo pacman -Sy --noconfirm steam
+yay -Sy --noconfirm portproton
+yay -Sy --noconfirm protonup-qt

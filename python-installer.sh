@@ -1,5 +1,5 @@
 #!/bin/bash
 
-sudo pacman -S --noconfirm python-pipx
+sudo pacman -Sy --noconfirm python-pipx
 pipx install jupyterlab
 pipx ensurepath

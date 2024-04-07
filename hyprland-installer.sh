@@ -14,17 +14,17 @@ sudo cp -r wallpapers ~/.config
 
 chmod +x ~/.config/waybar/scripts/waybar-wttr.py
 
-sudo pacman -S --noconfirm kde-cli-tools
-yay -S --noconfirm hyprland
-yay -S --noconfirm waybar
-sudo pacman -S --noconfirm swaylock
-yay -S --noconfirm swaylock-effects
-sudo pacman -S --noconfirm rofi
-sudo pacman -S --noconfirm gvfs
-sudo pacman -S --noconfirm thunar thunar-archive-plugin thunar-media-tags-plugin
-sudo pacman -S --noconfirm grim slurp wl-clipboard
-yay -S --noconfirm swww
-yay -S --noconfirm hyprpicker
+sudo pacman -Sy --noconfirm kde-cli-tools
+yay -Sy --noconfirm hyprland
+yay -Sy --noconfirm waybar
+sudo pacman -Sy --noconfirm swaylock
+yay -Sy --noconfirm swaylock-effects
+sudo pacman -Sy --noconfirm rofi
+sudo pacman -Sy --noconfirm gvfs
+sudo pacman -Sy --noconfirm thunar thunar-archive-plugin thunar-media-tags-plugin
+sudo pacman -Sy --noconfirm grim slurp wl-clipboard
+yay -Sy --noconfirm swww
+yay -Sy --noconfirm hyprpicker
 
 cp hyprland.conf ~/.config/hypr/hyprland.conf
 cp waybar/config ~/.config/waybar/config
@@ -36,7 +36,7 @@ cp swww/swww-random.sh ~/.config/swww/swww-random.sh
 cp Thunar/uca.xml ~/.config/Thunar/uca.xml
 cp alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 
-yay -S --noconfirm breeze-snow-cursor-theme
+yay -Sy --noconfirm breeze-snow-cursor-theme
 
 mkdir -p ~/.config/gtk-3.0
 mkdir -p ~/.config/gtk-4.0
@@ -64,6 +64,7 @@ EOL
 chmod +x gui-apps-installer.sh
 chmod +x python-installer.sh
 chmod +x games-installer.sh
+
 ./gui-apps-installer.sh
 ./python-installer.sh
 ./games-installer.sh

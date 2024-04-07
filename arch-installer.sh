@@ -110,7 +110,7 @@ pacman -Sy --noconfirm
 
 # Installing software
 echo "Installing software"
-pacman -S --noconfirm grub efibootmgr micro sudo dhcpcd os-prober ntfs-3g zram-generator
+pacman -Sy --noconfirm grub efibootmgr micro sudo dhcpcd os-prober ntfs-3g zram-generator
 
 # Enabling dhcpcd
 echo "Enabling dhcpcd"
@@ -124,7 +124,7 @@ EOL"
 
 # Installing openssh
 echo "Installing openssh"
-pacman -S --noconfirm openssh
+pacman -Sy --noconfirm openssh
 
 # Enabling sshd
 echo "Enabling sshd"

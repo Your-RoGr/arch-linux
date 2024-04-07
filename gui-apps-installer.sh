@@ -39,6 +39,9 @@ sudo pacman -S --noconfirm krita
 
 # Image viewer
 
+echo "Installing Eye of GNOME"
+sudo pacman -S --noconfirm eog
+
 echo "Installing imv"
 sudo pacman -S --noconfirm imv
 

@@ -18,7 +18,7 @@ if [[ "${vendor:0:4}" == "skip" ]]; then
 elif [[ $vendor =~ ^[0-9]+$ ]]; then
     if [ "$vendor" -eq 1 ]; then
         echo "Installing Nvidia drivers..."
-        sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings lib32-nvidia-utils
+        sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings lib32-nvidia-utils nvtop
         # Enable the nvidia service
         sudo systemctl enable nvidia-persistenced.service
     elif [ "$vendor" -eq 2 ]; then

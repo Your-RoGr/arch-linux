@@ -93,7 +93,8 @@ window#waybar {
 #bluetooth,
 #backlight,
 #wireplumber,
-#custom-power-menu {
+#custom-power-menu,
+#custom-change-idle {
     margin-right: 10px;
 }
 

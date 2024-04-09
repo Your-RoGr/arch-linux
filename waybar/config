@@ -180,7 +180,7 @@
     "custom/change-idle": {
         "tooltip": true,
         "format": "🖥️{}",
-        "exec": "bash sleep 1 && ~/.config/waybar/scripts/set_idle.sh",
+        "exec": "sleep 1 && bash ~/.config/waybar/scripts/set_idle.sh",
         "interval": "once",
         "on-click": "bash ~/.config/waybar/scripts/change_idle.sh",
         "return-type": "json",

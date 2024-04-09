@@ -28,7 +28,11 @@ yay -Sy --noconfirm swww
 yay -Sy --noconfirm hyprpicker
 
 cp hypr/hyprland.conf ~/.config/hypr/hyprland.conf
-cp hypr/hypridle.conf ~/.config/hypr/hypridle.conf
+cp hypr/hypridle-1.conf ~/.config/hypr/hypridle-1.conf
+cp hypr/hypridle-2.conf ~/.config/hypr/hypridle-2.conf
+cp hypr/hypridle-3.conf ~/.config/hypr/hypridle-3.conf
+cp hypr/hypridle-4.conf ~/.config/hypr/hypridle-4.conf
+cp hypr/last_config ~/.config/hypr/last_config
 cp waybar/config ~/.config/waybar/config
 cp waybar/style.css ~/.config/waybar/style.css
 cp rofi/config.rasi ~/.config/rofi/config.rasi

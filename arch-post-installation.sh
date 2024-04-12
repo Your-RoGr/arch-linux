@@ -53,6 +53,10 @@ cd yay
 makepkg -si --noconfirm
 rm -R -f ~/yay
 
+# Install Japanese tools
+sudo pacman -Sy --noconfirm fcitx fcitx-qt5 fcitx-im fcitx-configtool
+sudo pacman -Sy --noconfirm fcitx-mozc fcitx-anthy
+
 # Install font
 echo "Installing fonts"
 sudo pacman -Sy --noconfirm ttf-jetbrains-mono ttf-roboto

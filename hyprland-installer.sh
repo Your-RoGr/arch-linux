@@ -26,6 +26,7 @@ sudo pacman -Sy --noconfirm thunar thunar-archive-plugin thunar-media-tags-plugi
 sudo pacman -Sy --noconfirm grim slurp wl-clipboard
 yay -Sy --noconfirm swww
 yay -Sy --noconfirm hyprpicker
+sudo pacman -Sy lxsession gnome-disk-utility
 
 cp hypr/hyprland.conf ~/.config/hypr/hyprland.conf
 cp hypr/hypridle-1.conf ~/.config/hypr/hypridle-1.conf

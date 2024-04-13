@@ -57,6 +57,9 @@ rm -R -f ~/yay
 sudo pacman -Sy --noconfirm fcitx fcitx-qt5 fcitx-im fcitx-configtool
 sudo pacman -Sy --noconfirm fcitx-mozc fcitx-anthy
 
+mkdir -p ~/.config/fcitx
+cp fcitx/config ~/.config/fcitx/config
+
 # Install font
 echo "Installing fonts"
 sudo pacman -Sy --noconfirm ttf-jetbrains-mono ttf-roboto

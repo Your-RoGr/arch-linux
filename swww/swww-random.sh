@@ -6,7 +6,7 @@ export SWWW_TRANSITION_STEP=2
 export SWWW_TRANSITION_TYPE=random
 
 # This controls (in seconds) when to switch to the next image
-INTERVAL=300
+INTERVAL=1800
 
 while true; do
 	find "$1" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" -o -iname "*.gif" -o -iname "*.pnm" -o -iname "*.tga" -o -iname "*.tiff" -o -iname "*.webp" -o -iname "*.bmp" -o -iname "*.farbfeld" \) \

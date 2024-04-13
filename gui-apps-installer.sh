@@ -196,14 +196,6 @@ echo "Installing FileZilla"
 sudo pacman -Sy --noconfirm filezilla
 #sudo flatpak install -y flathub org.filezillaproject.Filezilla
 
-# Ark is a graphical file compression/decompression utility with 
-# support for multiple formats, including tar, gzip, bzip2, rar and zip
-# Ark is potentially unsafe
-
-echo "Installing Ark"
-sudo pacman -Sy --noconfirm ark
-#sudo flatpak install -y flathub org.kde.ark
-
 # --------------------------------------------------------------------------
 # Entertainments 
 # --------------------------------------------------------------------------

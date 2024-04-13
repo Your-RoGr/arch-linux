@@ -19,6 +19,7 @@
   ],
 
   "modules-right": [
+    "tray",
     "group/n",
     "group/v",
   ],
@@ -126,6 +127,12 @@
     "format-plugged": "🔌{capacity}%",
     "format-alt": "{time}",
     "on-click-middle": "cpupower-gui",
+  },
+
+  "tray": {
+    "icon-size": 24,
+    "spacing": 5,
+    "show-passive-items": true,
   },
 
   "group/n": {

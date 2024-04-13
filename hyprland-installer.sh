@@ -22,7 +22,7 @@ sudo pacman -Sy --noconfirm swaylock
 yay -Sy --noconfirm swaylock-effects
 sudo pacman -Sy --noconfirm rofi
 sudo pacman -Sy --noconfirm gvfs
-sudo pacman -Sy --noconfirm thunar thunar-archive-plugin thunar-media-tags-plugin
+sudo pacman -Sy --noconfirm thunar thunar-archive-plugin thunar-media-tags-plugin unrar file-roller
 sudo pacman -Sy --noconfirm grim slurp wl-clipboard
 yay -Sy --noconfirm swww
 yay -Sy --noconfirm hyprpicker

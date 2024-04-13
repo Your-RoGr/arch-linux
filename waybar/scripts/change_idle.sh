@@ -4,6 +4,7 @@ CONFIG1=~/.config/hypr/hypridle-1.conf
 CONFIG2=~/.config/hypr/hypridle-2.conf
 CONFIG3=~/.config/hypr/hypridle-3.conf
 CONFIG4=~/.config/hypr/hypridle-4.conf
+CONFIG5=~/.config/hypr/hypridle-5.conf
 LAST_CONFIG_FILE=~/.config/hypr/last_config
 
 killall hypridle
@@ -21,6 +22,9 @@ if [ -f "$LAST_CONFIG_FILE" ]; then
         echo "$CONFIG4" > $LAST_CONFIG_FILE
         hypridle -c $CONFIG4 &
     elif [ "$LAST_CONFIG" = "$CONFIG4" ]; then
+        echo "$CONFIG5" > $LAST_CONFIG_FILE
+        hypridle -c $CONFIG5 &
+    elif [ "$LAST_CONFIG" = "$CONFIG5" ]; then
         echo "$CONFIG1" > $LAST_CONFIG_FILE
         hypridle -c $CONFIG1 &
     fi

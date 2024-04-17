@@ -62,10 +62,37 @@ cp fcitx/config ~/.config/fcitx/config
 
 # Install font
 echo "Installing fonts"
-sudo pacman -Sy --noconfirm ttf-jetbrains-mono ttf-roboto
-yay -Sy --noconfirm ttf-ms-fonts ttf-vista-fonts ttf-paratype
-yay -Sy --noconfirm noto-color-emoji-fontconfig
-sudo pacman -Sy --noconfirm adobe-source-han-sans-jp-fonts adobe-source-han-serif-jp-fonts noto-fonts-cjk
+# RU-US fonts
+sudo pacman -Sy --noconfirm ttf-jetbrains-mono ttf-roboto ttf-bitstream-vera ttf-croscore ttf-dejavu
+sudo pacman -Sy --noconfirm ttf-droid gnu-free-fonts ttf-ibm-plex ttf-input libertinus-font noto-fonts gsfonts
+sudo pacman -Sy --noconfirm ttf-cascadia-code ttf-fantasque-sans-mono otf-fantasque-sans-mono ttf-fira-mono otf-fira-mono
+sudo pacman -Sy --noconfirm ttf-hack otf-hermit ttc-iosevka ttf-monofur ttf-roboto-mono cantarell-fonts ttf-fira-sans
+sudo pacman -Sy --noconfirm ttf-liberation otf-montserrat ttf-nunito ttf-opensans adobe-source-sans-fonts otf-crimson
+sudo pacman -Sy --noconfirm ttf-linux-libertine tex-gyre-fonts ttf-croscore ttf-ubuntu-font-family ttf-fira-code
+sudo pacman -Sy --noconfirm otf-fira-sans inter-font ttf-gentium-plus
+yay -Sy --noconfirm ttf-ms-fonts ttf-vista-fonts ttf-b612 font-bh-ttf ttf-courier-prime
+yay -Sy --noconfirm ttf-envy-code-r ttf-google-fonts-git otf-hasklig ttf-lilex ttf-meslo ttf-monaco ttf-mononoki
+yay -Sy --noconfirm ttf-comic-mono-git ttf-andika ttf-dmcasansserif otf-jost ttf-tahoma ttf-bitstream-charter otf-bitstream-charter
+yay -Sy --noconfirm otf-bodoni ebgaramond-otf ttf-heuristica ttf-librebaskerville otf-libre-caslon
+
+yay -Sy --noconfirm ttf-nothingyoucoulddo ttf-indieflower ttf-pacifico otf-londrina otf-tesla ttf-architects-daughte
+
+yay -Sy --noconfirm ttf-paratype otf-russkopis
+
+# Emoji Fonts
+sudo pacman -Sy --noconfirm noto-fonts-emoji ttf-joypixels
+yay -Sy --noconfirm	ttf-twemoji otf-openmoji ttf-twemoji-color ttf-symbola noto-color-emoji-fontconfig
+
+# Math Fonts
+yay -Sy --noconfirm ttf-cm-unicode otf-cm-unicode otf-stix tex-gyre-math-fonts
+
+# Other fonts
+yay -Sy --noconfirm ttf-mac-fonts
+
+# japanese fonts
+sudo pacman -Sy --noconfirm adobe-source-han-sans-jp-fonts adobe-source-han-serif-jp-fonts noto-fonts-cjk otf-ipafont otf-ipaexfont ttf-hanazono ttf-sazanami
+yay -Sy --noconfirm ttf-koruri ttf-monapo ttf-mplus-git ttf-vlgothic ttf-kanjistrokeorders
+
 fc-cache -fv
 
 # Install alacritty

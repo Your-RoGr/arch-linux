@@ -71,11 +71,11 @@ sudo pacman -Sy --noconfirm ttf-liberation otf-montserrat ttf-nunito ttf-opensan
 sudo pacman -Sy --noconfirm ttf-linux-libertine tex-gyre-fonts ttf-croscore ttf-ubuntu-font-family ttf-fira-code
 sudo pacman -Sy --noconfirm otf-fira-sans inter-font ttf-gentium-plus
 yay -Sy --noconfirm ttf-ms-fonts ttf-vista-fonts ttf-b612 font-bh-ttf ttf-courier-prime
-yay -Sy --noconfirm ttf-envy-code-r ttf-google-fonts-git otf-hasklig ttf-lilex ttf-meslo ttf-monaco ttf-mononoki
-yay -Sy --noconfirm ttf-comic-mono-git ttf-andika ttf-dmcasansserif otf-jost ttf-tahoma ttf-bitstream-charter otf-bitstream-charter
+yay -Sy --noconfirm ttf-envy-code-r
+yay -Sy --noconfirm ttf-comic-mono-git ttf-dmcasansserif otf-jost ttf-tahoma
 yay -Sy --noconfirm otf-bodoni ebgaramond-otf ttf-heuristica ttf-librebaskerville otf-libre-caslon
 
-yay -Sy --noconfirm ttf-nothingyoucoulddo ttf-indieflower ttf-pacifico otf-londrina otf-tesla ttf-architects-daughte
+yay -Sy --noconfirm otf-londrina otf-tesla ttf-architects-daughte
 
 yay -Sy --noconfirm ttf-paratype otf-russkopis
 
@@ -86,12 +86,9 @@ yay -Sy --noconfirm	ttf-twemoji otf-openmoji ttf-twemoji-color ttf-symbola noto-
 # Math Fonts
 yay -Sy --noconfirm ttf-cm-unicode otf-cm-unicode otf-stix tex-gyre-math-fonts
 
-# Other fonts
-yay -Sy --noconfirm ttf-mac-fonts
-
 # japanese fonts
 sudo pacman -Sy --noconfirm adobe-source-han-sans-jp-fonts adobe-source-han-serif-jp-fonts noto-fonts-cjk otf-ipafont otf-ipaexfont ttf-hanazono ttf-sazanami
-yay -Sy --noconfirm ttf-koruri ttf-monapo ttf-mplus-git ttf-vlgothic ttf-kanjistrokeorders
+yay -Sy --noconfirm ttf-koruri ttf-mplus-git ttf-vlgothic ttf-kanjistrokeorders
 
 fc-cache -fv
 

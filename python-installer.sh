@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 sudo pacman -Sy --noconfirm python-pipenv python-pipx
 pipx install jupyterlab
 

@@ -67,10 +67,10 @@ yay -Sy --noconfirm onlyoffice-bin
 echo "Installing cudatext-qt5-bin"
 yay -Sy --noconfirm cudatext-qt5-bin
 
-mkdir -p ~/.config/cudatext/settings
-mkdir -p ~/.config/cudatext/settings_default
-cp cudatext/settings/user.json ~/.config/cudatext/settings/user.json
-cp cudatext/settings_default/default.json ~/.config/cudatext/settings_default/default.json
+#mkdir -p ~/.config/cudatext/settings
+#mkdir -p ~/.config/cudatext/settings_default
+#cp cudatext/settings/user.json ~/.config/cudatext/settings/user.json
+#cp cudatext/settings_default/default.json ~/.config/cudatext/settings_default/default.json
 
 # --------------------------------------------------------------------------
 # Developer Tools
@@ -80,6 +80,18 @@ cp cudatext/settings_default/default.json ~/.config/cudatext/settings_default/de
 
 echo "Installing Docker desktop"
 yay -Sy --noconfirm docker-desktop
+
+# PostgreSQL
+
+sudo pacman -Sy --noconfirm postgresql
+sudo -u postgres initdb --locale en_US.UTF-8 -D /var/lib/postgres/data
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+sudo su - postgres
+psql -c "alter user postgres with password 'postgres'"
+
+# PostgreSQL client
+yay -Sy --noconfirm postbird-bin
 
 # Platform for building and using APIs
 # Postman is potentially unsafe

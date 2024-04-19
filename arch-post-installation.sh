@@ -136,15 +136,10 @@ echo "Installing xdg-desktop-portal-hyprland"
 sudo pacman -Sy --noconfirm xdg-desktop-portal-hyprland
 sudo pacman -Sy --noconfirm xdg-desktop-portal-wlr
 
-echo "Do you need an app for logitech, asus-rog, steelseries and other gaming mice? (press enter for default: [yes])"
-read mice_app
-mice_app=${mice_app:-yes}
+echo "Installing piper"
+sudo pacman -Sy --noconfirm piper
 
-if [[ "${mice_app}" == "yes" ]]; then
-    echo "Installing piper"
-    sudo pacman -Sy --noconfirm piper
-
-    cat << EOL | sudo tee /usr/share/libratbag/logitech-g102-g203.device > /dev/null
+cat << EOL | sudo tee /usr/share/libratbag/logitech-g102-g203.device > /dev/null
 # G102, G103 and G203 (USB)
 [Device]
 Name=Logitech Gaming Mouse G102/G103/G203

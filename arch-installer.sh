@@ -48,36 +48,31 @@ elif [[ "${sd:0:2}" == "sd" ]]; then
     # Formatting the partitions
     echo "Formatting the partitions"
     mkfs.fat -F 32 /dev/"$sd"1
-    mkswap /dev/"$sd"2
-    mkfs.ext4 /dev/"$sd"3
+    mkfs.ext4 /dev/"$sd"2
 
     # Mounting the partitions
     echo "Mounting the partitions"
-    mount /dev/$sd"3" /mnt
+    mount /dev/$sd"2" /mnt
     mkdir /mnt/boot
     mount /dev/$sd"1" /mnt/boot
-    swapon /dev/$sd"2"
 elif [[ "${sd:0:4}" == "nvme" ]]; then
     # Partitioning the disk with parted
     echo "Partitioning the disk with parted"
     parted /dev/$sd mklabel gpt
     parted /dev/$sd mkpart primary fat32 1MiB 513MiB
     parted /dev/$sd set 1 boot on
-    parted /dev/$sd mkpart primary linux-swap 513MiB 20GiB
-    parted /dev/$sd mkpart primary ext4 20GiB 100%
+    parted /dev/$sd mkpart primary ext4 513MiB 100%
 
     # Formatting the partitions
     echo "Formatting the partitions"
     mkfs.fat -F 32 /dev/"$sd"p1
-    mkswap /dev/"$sd"p2
-    mkfs.ext4 /dev/"$sd"p3
+    mkfs.ext4 /dev/"$sd"p2
 
     # Mounting the partitions
     echo "Mounting the partitions"
-    mount /dev/$sd"p3" /mnt
+    mount /dev/$sd"p2" /mnt
     mkdir /mnt/boot
     mount /dev/$sd"p1" /mnt/boot
-    swapon /dev/$sd"p2"
 else
     echo "Wrong disk or no existing format in the script, format the partitions manually, create /mnt/boot and mount /mnt/boot (EFI disk partitions) and /mnt in different disk partitions."
     echo "Partition the drive into three partitions for EFI (512mb), swap, and the main drive"
@@ -98,6 +93,9 @@ genfstab -U /mnt >> /mnt/etc/fstab
 echo "Chrooting into the installed system"
 
 mkdir -p /mnt/local/$username
+mkdir -p /mnt/home/$username
+
+cp -r arch-linux /mnt/home/$username/arch-linux
 
 cat > /mnt/local/$username/continue_install.sh << EOL
 #!/bin/bash
@@ -179,18 +177,10 @@ if [[ "${sd:0:4}" == "skip" ]]; then
     path_efi=$(echo \$path_efi | sed 's/[^[:alnum:]\/_:]//g')
     echo "You entered: \$path_efi"
     mount \$path_efi /boot/EFI
-
-    echo "Enter path for swap (for example: /dev/sda2):"
-    read path_swap
-    path_swap=$(echo \$path_swap | sed 's/[^[:alnum:]\/_:]//g')
-    echo "You entered: \$path_swap"
-    echo '\$path_swap swap swap defaults 0 0' | tee -a /etc/fstab
 elif [[ "${sd:0:2}" == "sd" ]]; then
     mount /dev/$sd"1" /boot/EFI
-    echo '/dev/$sd"2" swap swap defaults 0 0' | tee -a /etc/fstab
 elif [[ "${sd:0:4}" == "nvme" ]]; then
     mount /dev/$sd"p1" /boot/EFI
-    echo '/dev/$sd"p2" swap swap defaults 0 0' | tee -a /etc/fstab
 fi
 
 grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/EFI --removable
@@ -208,3 +198,5 @@ chmod +x /mnt/local/$username/continue_install.sh
 arch-chroot /mnt /bin/bash /local/$username/continue_install.sh
 
 umount -R /mnt
+
+poweroff

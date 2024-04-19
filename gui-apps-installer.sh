@@ -89,6 +89,7 @@ sudo systemctl start postgresql
 sudo systemctl enable postgresql
 sudo su - postgres
 psql -c "alter user postgres with password 'postgres'"
+exit
 
 # PostgreSQL client
 yay -Sy --noconfirm postbird-bin

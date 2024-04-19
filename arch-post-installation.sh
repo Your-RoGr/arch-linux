@@ -148,7 +148,6 @@ Driver=hidpp20
 LedTypes=logo;side;
 DeviceType=mouse
 EOL
-fi
 
 cd ~/acrh-linux
 chmod +x hyprland-installer.sh

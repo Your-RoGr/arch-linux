@@ -93,7 +93,6 @@ genfstab -U /mnt >> /mnt/etc/fstab
 echo "Chrooting into the installed system"
 
 mkdir -p /mnt/local/$username
-cp -r arch-linux /mnt/local/$username/arch-linux
 
 cat > /mnt/local/$username/continue_install.sh << EOL
 #!/bin/bash

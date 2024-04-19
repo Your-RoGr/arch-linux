@@ -150,5 +150,6 @@ DeviceType=mouse
 EOL
 fi
 
+cd ~/acrh-linux
 chmod +x hyprland-installer.sh
 ./hyprland-installer.sh

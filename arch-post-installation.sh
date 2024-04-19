@@ -157,5 +157,3 @@ fi
 
 chmod +x hyprland-installer.sh
 ./hyprland-installer.sh
-
-$SHELL

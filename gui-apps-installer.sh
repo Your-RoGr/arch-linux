@@ -178,11 +178,17 @@ echo "Installing Yandex Browser"
 yay -Sy --noconfirm yandex-browser
 #sudo flatpak install -y flathub ru.yandex.Browser
 
+echo "Installing Google Chrome"
+yay -Sy --noconfirm google-chrome
+
+echo "Installing Firefox"
+sudo pacman -Sy --noconfirm firefox
+
 # Thunderbird is a free and open source email, newsfeed, chat, and calendaring client
 # Thunderbird is potentially unsafe
 
-echo "Installing Thunderbird"
-sudo pacman -Sy --noconfirm thunderbird
+#echo "Installing Thunderbird"
+#sudo pacman -Sy --noconfirm thunderbird
 #sudo flatpak install -y flathub org.mozilla.Thunderbird
 
 # --------------------------------------------------------------------------

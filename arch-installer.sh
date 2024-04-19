@@ -208,3 +208,5 @@ chmod +x /mnt/local/$username/continue_install.sh
 arch-chroot /mnt /bin/bash /local/$username/continue_install.sh
 
 umount -R /mnt
+
+poweroff

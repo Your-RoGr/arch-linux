@@ -149,6 +149,6 @@ LedTypes=logo;side;
 DeviceType=mouse
 EOL
 
-cd ~/acrh-linux
+cd ..
 chmod +x hyprland-installer.sh
 ./hyprland-installer.sh

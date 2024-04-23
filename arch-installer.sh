@@ -97,6 +97,15 @@ mkdir -p /mnt/local/$username
 cat > /mnt/local/$username/continue_install.sh << EOL
 #!/bin/bash
 
+# Configuring users
+echo "Configuring users"
+echo "Enter the root password"
+passwd
+useradd -m -g users -G wheel,audio,video,optical,storage -s /bin/bash $username
+echo "Enter the $username password"
+passwd $username
+sed -i 's/# %wheel ALL=(ALL:ALL) NOPASSWD: ALL/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/g' /etc/sudoers
+
 # Configuring pacman on installer
 echo "Configuring pacman"
 sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 10/g' /etc/pacman.conf
@@ -154,15 +163,6 @@ EOL"
 echo "timezone - $current_timezone"
 ln -sf /usr/share/zoneinfo/$current_timezone /etc/localtime
 hwclock --systohc
-
-# Configuring users
-echo "Configuring users"
-echo "Enter the root password"
-passwd
-useradd -m -g users -G wheel,audio,video,optical,storage -s /bin/bash $username
-echo "Enter the $username password"
-passwd $username
-sed -i 's/# %wheel ALL=(ALL:ALL) NOPASSWD: ALL/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/g' /etc/sudoers
 
 # Installing GRUB
 echo "Installing GRUB"

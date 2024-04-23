@@ -60,7 +60,7 @@ chmod +x arch-installer.sh
 [ OK ] Reached target System Power Off
 ```
 
-8. Далее снова делаем клон данного репозитория:
+8. Далее входим под своим пользователем и снова делаем клон данного репозитория:
 
 ```sh
 git clone https://github.com/Your-RoGr/arch-linux.git
@@ -85,6 +85,31 @@ chmod +x arch-post-installation.sh
 11. Дождитесь конца установки и наслаждайтесь использованием Arch Linux с Hyprland!
 
 ### Дополнительно
+
+1. Можно установить CUDA (Если у вас видеокарта GTX 1050 и новее) и python виртуальное окружение с Jupyter Lab:
+
+```sh
+./python-installer.sh
+```
+
+2. Можно настроить пользователя postgres для PostgreSQL
+
+```sh
+sudo -u postgres initdb --locale en_US.UTF-8 -D /var/lib/postgres/data
+sudo su - postgres
+psql -c "alter user postgres with password 'postgres'"
+exit
+```
+
+3. Можно установить pgadmin4, он требует дополнительных настроек:
+
+```sh
+chmod +x pgadmin.sh
+```
+
+```sh
+./pgadmin.sh
+```
 
 ## Настройка
 

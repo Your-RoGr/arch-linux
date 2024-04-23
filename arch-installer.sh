@@ -114,7 +114,7 @@ sed -i 's/# %wheel ALL=(ALL:ALL) NOPASSWD: ALL/%wheel ALL=(ALL:ALL) NOPASSWD: AL
 
 # Installing software
 echo "Installing software"
-pacman -Sy --noconfirm grub efibootmgr micro dhcpcd os-prober ntfs-3g zram-generator
+pacman -Sy --noconfirm grub efibootmgr micro dhcpcd os-prober ntfs-3g zram-generator git
 
 # Enabling dhcpcd
 echo "Enabling dhcpcd"

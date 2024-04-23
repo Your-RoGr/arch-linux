@@ -105,7 +105,7 @@ chmod +x arch-post-installation.sh
 ./python-installer.sh
 ```
 
-> Для работы с окружением используйте слудующую команду:
+> Для работы с окружением используйте следующую команду:
 
 ```sh
 source ~/jupyterlab/bin/activate.fish

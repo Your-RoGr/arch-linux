@@ -105,6 +105,12 @@ chmod +x arch-post-installation.sh
 ./python-installer.sh
 ```
 
+> Для работы с окружением используйте слудующую команду:
+
+```sh
+source ~/jupyterlab/bin/activate.fish
+```
+
 2. Можно настроить пользователя postgres для PostgreSQL:
 
 ```sh

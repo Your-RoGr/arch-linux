@@ -89,6 +89,8 @@ yay -Sy --noconfirm docker-desktop
 
 echo "Installing PostgreSQL"
 sudo pacman -Sy --noconfirm postgresql
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
 
 # PostgreSQL client
 echo "Installing PostBird"

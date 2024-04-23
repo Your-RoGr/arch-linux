@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo pacman -Sy --noconfirm python-pipx
 
 mkdir -p ~/.local/share/applications/

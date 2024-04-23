@@ -72,5 +72,4 @@ chmod +x gui-apps-installer.sh
 chmod +x python-installer.sh
 chmod +x games-installer.sh
 
-./python-installer.sh
 ./gui-apps-installer.sh

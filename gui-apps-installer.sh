@@ -87,15 +87,11 @@ yay -Sy --noconfirm docker-desktop
 
 # PostgreSQL
 
+echo "Installing PostgreSQL"
 sudo pacman -Sy --noconfirm postgresql
-sudo -u postgres initdb --locale en_US.UTF-8 -D /var/lib/postgres/data
-sudo systemctl start postgresql
-sudo systemctl enable postgresql
-sudo su - postgres
-psql -c "alter user postgres with password 'postgres'"
-exit
 
 # PostgreSQL client
+echo "Installing PostBird"
 yay -Sy --noconfirm postbird-bin
 
 # Platform for building and using APIs
@@ -252,3 +248,5 @@ sudo pacman -Sy --noconfirm filezilla
 
 echo "Installing gnome-clocks"
 sudo pacman -Sy --noconfirm gnome-clocks
+
+./games-installer.sh

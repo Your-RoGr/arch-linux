@@ -78,7 +78,7 @@ yay -Sy --noconfirm cudatext-qt5-bin
 
 # The Open Source build of Visual Studio Code (vscode) editor
 echo "Installing Visual Studio Code"
-sudo pacman -Sy ---noconfirm code
+sudo pacman -Sy --noconfirm code
 
 # Docker with GUI
 

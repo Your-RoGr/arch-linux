@@ -12,7 +12,10 @@ else
     sudo pacman -Sy --noconfirm tensorflow-cuda
 fi
 
+sudo mkdir /app
+sudo chmod -R 777 /app
+
 python -m venv ~/jupyterlab
 source ~/jupyterlab/bin/activate
-pip install jupyterlab
+pip install -r requirements.txt
 deactivate

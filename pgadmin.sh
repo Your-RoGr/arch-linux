@@ -2,9 +2,8 @@
 
 sudo pacman -Sy --noconfirm python-pipx
 
-mkdir -p ~/.local/share/applications/
-cp applications/jupyter-lab.desktop ~/.local/share/applications/jupyter-lab.desktop
-cp applications/Jupyter_logo.png ~/.local/share/applications/Jupyter_logo.png
+sudo mkdir /app
+sudo chmod -R 777 /app
 
 pipx install pgadmin4
 cp applications/pgadmin4.desktop ~/.local/share/applications/pgadmin4.desktop

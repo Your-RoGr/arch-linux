@@ -6,11 +6,22 @@
 - [Установка](#Установка)
 - [Настройка](#Настройка)
 - [Hotkeys](#Hotkeys)
+- [Waybar](#Waybar)
 - [GUI-Apps](#GUI-Apps)
+- [Пакеты-Python](#Пакеты-Python)
+- [Forks](#Forks)
+- [License](#License)
 
 ## Введение
 
 Данный репозиторий посвещён [спину](https://cyclowiki.org/wiki/Spin_(операционная_система)) независимо разрабатываемого x86-64 дистрибутива GNU/Linux общего назначени - [Arch Linux](https://wiki.archlinux.org/title/Arch_Linux_(Русский)). Данный спин использует в качестве оконого менеджера [Hyprland](https://hyprland.org/) - это основанный на wlroots tiling Wayland композитор.  
+
+- Terminal - Alacritty
+- File manager - Thunar
+- Wallpaper engine - swww
+- Cursor - Breeze Snow
+- Lock - swaylock
+- Bar - Waybar
 
 ## Установка
 
@@ -84,20 +95,27 @@ chmod +x arch-post-installation.sh
 
 11. Дождитесь конца установки и наслаждайтесь использованием Arch Linux с Hyprland!
 
+> Возможно потребуется перезагрузка
+
 ### Дополнительно
 
-1. Можно установить CUDA (Если у вас видеокарта GTX 1050 и новее) и python виртуальное окружение с Jupyter Lab:
+1. Можно установить CUDA (Если у вас видеокарта GTX 1050 и новее) и/или python виртуальное окружение с Jupyter Lab и с пакетами для python из requirements.txt:
 
 ```sh
 ./python-installer.sh
 ```
 
-2. Можно настроить пользователя postgres для PostgreSQL
+2. Можно настроить пользователя postgres для PostgreSQL:
 
 ```sh
-sudo -u postgres initdb --locale en_US.UTF-8 -D /var/lib/postgres/data
 sudo su - postgres
+```
+
+```sh
 psql -c "alter user postgres with password 'postgres'"
+```
+
+```sh
 exit
 ```
 
@@ -113,7 +131,138 @@ chmod +x pgadmin.sh
 
 ## Настройка
 
+1. Настройка нескольких мониторов. [Ссылка на документацию](https://wiki.hyprland.org/Configuring/Monitors/). По умолчанию настраивается автоматически. Строка в ~/.config/hypr/hyprland.conf (после установки):
+
+```conf
+monitor=,preferred,auto,1
+```
+
+2. Обои необходимо копировать в директорию ~/.config/wallpapers. Поддерживаются следующие форматы: jpeg, png, gif, pnm, tga, tiff, webp, bmp, farbfeld
+
+3. У waybar, swaylock, swww, rofi, hypridle (hypr), alacritty, есть свои файлы настроек внешнего вида и функционала, которые находятся в соответствующих директориях.
+
+>Другие настройки Hyprland можно ознакомится в [документации](https://wiki.hyprland.org/) и выполняются в файле ~/.config/hypr/hyprland.conf.
+
 ## Hotkeys
+
+Все горячие клавиши для системы описаны в файле ~/.config/hypr/hyprland.conf (после установки). Кнопка Win == Super.
+
+1. Системные:
+
+- Win + W - Скрыть/показать Waybar.
+- Win + Shift + W - Обновить Waybar.
+- Win + Left Ctrl + Shift + W - Перезапустить Waybar.
+- Win + Left Ctrl + Shift + K - Выйти из Hyprland.
+- Win + L - Заблокировать экран.
+- Win + C - Пипетка (копирует цвет в буфер).
+- Win + PrtScr - Делает скриншот области (копирует скриншот в буфер).
+- PrtScr - Делает скриншот всего экрана (копирует скриншот в буфер).
+- Win + [0-9] - Смена рабочего стола.
+- Win + Scroll - Смена рабочего стола.
+
+- Alt + Tab - Смена рабочего стола.
+
+2. Открытие окон:
+
+- Win + E - Открыть файловый менеджер Thunar.
+- Win + R - Открыть меню приложнений Rofi.
+- Win + T - Открыть терминал Alacritty.
+- Win + U - Открыть меню cpupower для настройки частот процессора.
+- Win + I - Открыть меню Wi-Fi (iwgtk).
+- Win + O - Открыть приложение часы.
+- Win + P - Открыть power меню.
+- Win + H - Открыть htop.
+- Win + Shift + H  - Открыть bashtop.
+- Win + B - Открыть меню bluetooth (blueberry).
+- Win + N - Открыть nvtop.
+- Win + M - Открыть микшер (pavucontrol).
+
+3. Работа с окнами:
+
+- Win + Q - Закрыть активное окно.
+- Win + S - Открыть/закрыть потайной рабочий стол.
+- Win + Shift + S - Переместить активное окно в потайной рабочий стол.
+- Win + F - Сделать активное окно во весь экран.
+- Win + J - Сменить тип оринтации окон.
+- Win + V - Сменить свойство активного окна - плаванье.
+- Win + Стрелка - Поменять фокус на другое окно.
+- Win + Shift + Стрелка - Поменять активное окно с другим местами.
+- Win + Left Ctrl + Стрелка - Изменить размеры активного окна.
+- Win + Shift + [0-9] - Переместить активное окно на другой рабочий стол.
+- Win + ЛКМ - Двигать окно.
+- Win + ПКМ - Ищменить рамер окна (если плавает). 
+
+## Waybar
 
 ## GUI-Apps
 
+Список устанавливаемых приложений с пользовательским графическим интерфейсом:
+
+1. Работа с медиа:
+
+- VLC (Медиаплеер)
+- OBS Studio (Прямая трансляция и запись видео)
+- Inkscape (Редактор векторной графики)
+- Blender (Пакет для создания 3D-изображений)
+- krita (Цифровая живопись)
+- Eye of GNOME (Программа просмотра изображений)
+- imv (Программа просмотра изображений)
+
+2. Работа с документами:
+
+- LibreOffice (Для работы с документами)
+- ONLYOFFICE (Для работы с документами)
+- Cudatext (Для работы с текстовыми файлами)
+- Obsidian (База знаний на основе Markdown)
+- Evince (Чтение электронных книг)
+
+3. Инструменты разработчика:
+
+- Visual Studio Code (IDE общего назначения)
+- Docker desktop (Средство контейнерезации)
+- PostBird (Клиент PostgreSQL)
+- Postman (Платформа тестирования Web API)
+- DB Browser for SQLite
+- Pycharm Community Edition (IDE для Python)
+- PyCharm-Professional (IDE для Python с расширенными возможностями)
+- GoLand (IDE для Golang)
+- CLion (IDE для C++)
+- Figma (Макетирование сайтов)
+- Godot (Разработка игр)
+- Godot (C#/.NET)
+
+4. Работа в сети
+
+- WebCord (Discord)
+- Telegram-desktop
+- Yandex Browser
+- Google Chrome
+- Firefox
+
+5. Игры
+
+- Steam (Магазин игр)
+
+6. Другое
+
+- FileZilla (FTP-клиент)
+- PortProton (Запуск .exe файлов под Windows)
+- ProtonUp (Обновление протонов для Steam и PortProton)
+
+## Пакеты-Python
+
+Можете ознакомится с пакетами Python и изменить их при необходимсоти в requirements.txt. Дополнительная информация в [PyPI](https://pypi.org/) или в документациях разработчиков пакетов.
+
+## Forks
+
+На данный момент существуют доверенные форки спина:
+
+- [arch-linux-rogr](https://github.com/Your-RoGr/arch-linux-rogr)
+- [arch-linux-ML](https://github.com/Your-RoGr/arch-linux-ML)
+- [arch-linux-extra]()
+
+## License
+
+MIT
+
+**Free Software, Hell Yeah!**

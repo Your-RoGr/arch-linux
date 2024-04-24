@@ -69,6 +69,9 @@ cat > ~/.bash_profile << EOL
 exec Hyprland
 EOL
 
+mkdir -p ~/Screenshots
+echo "set fish_greeting" > ~/.config/fish/config.fish
+
 chmod +x gui-apps-installer.sh
 chmod +x python-installer.sh
 chmod +x games-installer.sh

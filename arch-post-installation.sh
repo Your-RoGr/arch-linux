@@ -108,7 +108,6 @@ sudo pacman -Sy --noconfirm xdg-desktop-portal xdg-desktop-portal-gtk xdg-deskto
 # Install other soft
 echo "Installing clang, gdb, ninja, gcc, cmake, fastfetch, htop, bashtop, fish, lf, neovim"
 sudo pacman -Sy --noconfirm clang gdb ninja gcc cmake fastfetch htop bashtop fish lf neovim
-set -U fish_greeting
 
 sudo systemctl enable systemd-homed
 sudo systemctl start systemd-homed

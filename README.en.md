@@ -337,6 +337,7 @@ List of installed GUI applications:
 - ProtonUp (Update proton for Steam and PortProton)
 - Disks (Easy disk management)
 - File Roller (Archiver)
+- Filelight (Graphical disk usage analyzer)
 
 ## Python Packages
 

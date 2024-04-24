@@ -333,6 +333,7 @@ monitor=,preferred,auto,1
 - ProtonUp (Обновление протонов для Steam и PortProton)
 - Disks (Для удобной работы с дисками)
 - File Roller (Архиватор)
+- Filelight (Графический анализатор использования диска)
 
 ## Пакеты-Python
 

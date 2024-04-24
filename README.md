@@ -200,7 +200,7 @@ monitor=,preferred,auto,1
 
 ## Waybar
 
-![Waybar](https://www.dropbox.com/scl/fi/n7xl8x9o9ypw0isc8iuun/waybar.png?rlkey=5hzd6f8xjdoqtvqwcpplvyyfm&st=fqf99pug&dl=0)
+![Waybar](https://www.dropbox.com/scl/fi/n7xl8x9o9ypw0isc8iuun/waybar.png?dl=0)
 
 ## GUI-Apps
 

@@ -147,7 +147,7 @@ monitor=,preferred,auto,1
 
 3. У waybar, swaylock, swww, rofi, hypridle (hypr), alacritty, есть свои файлы настроек внешнего вида и функционала, которые находятся в соответствующих директориях.
 
->Другие настройки Hyprland можно ознакомится в [документации](https://wiki.hyprland.org/) и выполняются в файле ~/.config/hypr/hyprland.conf.
+> С другими настройками Hyprland можно ознакомится в [документации](https://wiki.hyprland.org/) и выполняются в файле ~/.config/hypr/hyprland.conf.
 
 ## Hotkeys
 
@@ -199,6 +199,8 @@ monitor=,preferred,auto,1
 - Win + ПКМ - Ищменить рамер окна (если плавает). 
 
 ## Waybar
+
+![Waybar](https://www.dropbox.com/scl/fi/n7xl8x9o9ypw0isc8iuun/waybar.png?rlkey=5hzd6f8xjdoqtvqwcpplvyyfm&st=fqf99pug&dl=0)
 
 ## GUI-Apps
 

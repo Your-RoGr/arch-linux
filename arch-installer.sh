@@ -101,7 +101,7 @@ cat > /mnt/local/$username/continue_install.sh << EOL
 echo "Configuring pacman"
 sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 10/g' /etc/pacman.conf
 
-pacman -Sy --noconfirm  sudo
+pacman -Sy --noconfirm sudo
 
 # Configuring users
 echo "Configuring users"
@@ -114,7 +114,7 @@ sed -i 's/# %wheel ALL=(ALL:ALL) NOPASSWD: ALL/%wheel ALL=(ALL:ALL) NOPASSWD: AL
 
 # Installing software
 echo "Installing software"
-pacman -Sy --noconfirm grub efibootmgr micro dhcpcd os-prober ntfs-3g zram-generator git
+pacman -Sy --noconfirm grub efibootmgr micro dhcpcd os-prober ntfs-3g zram-generator git curl
 
 # Enabling dhcpcd
 echo "Enabling dhcpcd"

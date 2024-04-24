@@ -24,3 +24,6 @@ deactivate
 mkdir -p ~/.local/share/applications/
 cp applications/jupyter-lab.desktop ~/.local/share/applications/jupyter-lab.desktop
 cp applications/Jupyter_logo.png ~/.local/share/applications/Jupyter_logo.png
+
+# Clean cache
+sudo pacman -Scc --noconfirm

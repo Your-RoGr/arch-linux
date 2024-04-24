@@ -252,4 +252,11 @@ sudo pacman -Sy --noconfirm filezilla
 echo "Installing gnome-clocks"
 sudo pacman -Sy --noconfirm gnome-clocks
 
+echo "Installing Filelight"
+sudo pacman -S --noconfirm  filelight
+
+# Clean cache
+sudo pacman -Scc --noconfirm
+yay -Scc --noconfirm
+
 ./games-installer.sh

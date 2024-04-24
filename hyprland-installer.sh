@@ -76,4 +76,8 @@ chmod +x gui-apps-installer.sh
 chmod +x python-installer.sh
 chmod +x games-installer.sh
 
+# Clean cache
+sudo pacman -Scc --noconfirm
+yay -Scc --noconfirm
+
 ./gui-apps-installer.sh

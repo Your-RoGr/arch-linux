@@ -2,7 +2,12 @@
 
 sudo rm -rf /local
 
-sudo pacman -Syu
+curl -o ~/pacman.conf https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/pacman/trunk/pacman.conf    
+sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 10/g' ~/pacman.conf
+sudo cp ~/pacman.conf /etc/pacman.conf
+rm -f ~/pacman.conf
+
+sudo pacman -Syyu
 sudo pacman -Sy --noconfirm intel-media-driver
 sudo pacman -Sy --noconfirm libva-intel-driver
 sudo pacman -Sy --noconfirm libva-intel-driver libva-mesa-driver mesa-vdpau

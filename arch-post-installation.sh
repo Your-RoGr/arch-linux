@@ -2,12 +2,9 @@
 
 sudo rm -rf /local
 
-curl -o ~/pacman.conf https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/pacman/trunk/pacman.conf    
-sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 10/g' ~/pacman.conf
-sudo cp ~/pacman.conf /etc/pacman.conf
-rm -f ~/pacman.conf
+sudo cp pacman/pacman.conf /etc/pacman.conf
 
-sudo pacman -Syyu
+sudo pacman -Syyu --noconfirm
 sudo pacman -Sy --noconfirm intel-media-driver
 sudo pacman -Sy --noconfirm libva-intel-driver
 sudo pacman -Sy --noconfirm libva-intel-driver libva-mesa-driver mesa-vdpau
@@ -38,13 +35,6 @@ else
     echo "Invalid entry. Please enter either 1 or 2."
 fi
 
-# Enable multilib
-echo "Enabling multilib"
-sudo sed -i 's/#\[multilib\]/\[multilib\]/g' /etc/pacman.conf
-sudo sed -i 's/#Include = \/etc\/pacman.d\/mirrorlist/Include = \/etc\/pacman.d\/mirrorlist/g' /etc/pacman.conf
-
-sudo pacman -Syu --noconfirm
-
 # Install ntp
 echo "Installing ntp"
 sudo pacman -Sy --noconfirm ntp
@@ -56,7 +46,9 @@ sudo pacman -Sy --noconfirm git base-devel wget
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
-rm -R -f ~/yay
+
+cd ..
+rm -rf ~/yay
 
 # Install Japanese tools
 sudo pacman -Sy --noconfirm fcitx fcitx-qt5 fcitx-im fcitx-configtool
@@ -105,11 +97,6 @@ sudo pacman -Sy --noconfirm alacritty
 echo "Installing xdg"
 sudo pacman -Sy --noconfirm xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-wlr xdg-utils kde-cli-tools
 
-# install flatpak
-#echo "Installing flatpak"
-#sudo pacman -Sy --noconfirm flatpak
-#sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
 # Install other soft
 echo "Installing clang, gdb, ninja, gcc, cmake, fastfetch, htop, bashtop, fish, lf, neovim"
 sudo pacman -Sy --noconfirm clang gdb ninja gcc cmake fastfetch htop bashtop fish lf neovim
@@ -153,6 +140,5 @@ LedTypes=logo;side;
 DeviceType=mouse
 EOL
 
-cd ..
 chmod +x hyprland-installer.sh
 ./hyprland-installer.sh

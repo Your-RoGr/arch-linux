@@ -18,7 +18,6 @@ sudo pacman -Sy --noconfirm kde-cli-tools
 yay -Sy --noconfirm hyprland
 yay -Sy --noconfirm waybar
 yay -Sy --noconfirm hypridle-git
-#sudo pacman -Sy --noconfirm swaylock
 yay -Sy --noconfirm swaylock-effects
 sudo pacman -Sy --noconfirm rofi
 sudo pacman -Sy --noconfirm gvfs
@@ -70,6 +69,9 @@ exec Hyprland
 EOL
 
 mkdir -p ~/Screenshots
+
+mkdir -p ~/.config/fish
+touch ~/.config/fish/config.fish
 echo "set fish_greeting" > ~/.config/fish/config.fish
 
 chmod +x gui-apps-installer.sh

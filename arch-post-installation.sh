@@ -50,13 +50,6 @@ makepkg -si --noconfirm
 cd ..
 rm -rf ~/yay
 
-# Install Japanese tools
-sudo pacman -Sy --noconfirm fcitx fcitx-qt5 fcitx-im fcitx-configtool
-sudo pacman -Sy --noconfirm fcitx-mozc fcitx-anthy
-
-mkdir -p ~/.config/fcitx
-cp fcitx/config ~/.config/fcitx/config
-
 # Install font
 echo "Installing fonts"
 # RU-US fonts

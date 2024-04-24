@@ -305,7 +305,7 @@ List of installed GUI applications:
 
 **3. Developer tools:**
 
-- Visual Studio Code (General-purpose IDE)
+- Visual Studio Code [Code - OSS] (General-purpose IDE)
 - Docker desktop (Containerization tool)
 - PostBird (PostgreSQL client)
 - Postman (Web API testing platform)
@@ -338,6 +338,7 @@ List of installed GUI applications:
 - Disks (Easy disk management)
 - File Roller (Archiver)
 - Filelight (Graphical disk usage analyzer)
+- Piper (Application to configure gaming mice)
 
 ## Python Packages
 
@@ -349,6 +350,7 @@ Currently, there are trusted forks of the spin:
 
 - [arch-linux-rogr](https://github.com/Your-RoGr/arch-linux-rogr)
 - [arch-linux-ML](https://github.com/Your-RoGr/arch-linux-ML)
+- [arch-linux-extra](https://github.com/Extragenchik/arch-linux-extra)
 
 ## License
 

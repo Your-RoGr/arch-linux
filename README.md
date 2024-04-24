@@ -301,7 +301,7 @@ monitor=,preferred,auto,1
 
 **3. Инструменты разработчика:**
 
-- Visual Studio Code (IDE общего назначения)
+- Visual Studio Code [Code - OSS] (IDE общего назначения)
 - Docker desktop (Средство контейнерезации)
 - PostBird (Клиент PostgreSQL)
 - Postman (Платформа тестирования Web API)
@@ -334,6 +334,7 @@ monitor=,preferred,auto,1
 - Disks (Для удобной работы с дисками)
 - File Roller (Архиватор)
 - Filelight (Графический анализатор использования диска)
+- Piper (Приложение для настройки игровых мышей)
 
 ## Пакеты-Python
 
@@ -345,6 +346,7 @@ monitor=,preferred,auto,1
 
 - [arch-linux-rogr](https://github.com/Your-RoGr/arch-linux-rogr)
 - [arch-linux-ML](https://github.com/Your-RoGr/arch-linux-ML)
+- [arch-linux-extra](https://github.com/Extragenchik/arch-linux-extra)
 
 ## License
 

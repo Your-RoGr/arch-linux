@@ -344,7 +344,6 @@ monitor=,preferred,auto,1
 
 - [arch-linux-rogr](https://github.com/Your-RoGr/arch-linux-rogr)
 - [arch-linux-ML](https://github.com/Your-RoGr/arch-linux-ML)
-- [arch-linux-extra]()
 
 ## License
 

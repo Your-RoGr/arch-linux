@@ -46,7 +46,7 @@ To install, you need to prepare a bootable USB with an Arch Linux image, for exa
 3. After the image is prepared for installation, you will see the "root@archiso" prompt. Install git and clone this repository:
 
 ```sh
-pacman -Sy --nocofirm git
+pacman -Sy --noconfirm git
 ```
 
 ```sh
